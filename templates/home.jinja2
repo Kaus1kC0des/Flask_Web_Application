@@ -1,0 +1,79 @@
+{% extends 'base.jinja2' %}
+
+{% block content %}
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 20px;
+        text-align:center;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+
+    .sub-header {
+        font-size: 24px;
+        color: #555;
+        text-align:center;
+         font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+
+    .post-list {
+        list-style-type: none;
+        padding: 0;
+       
+    }
+
+    .post-item {
+        margin-bottom: 10px;
+        text-align:center;
+    }
+
+    .post-link {
+        text-decoration: none;
+        color: #007BFF;
+        font-weight: bold;
+    }
+
+    .create-link {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        margin-top: 20px;
+        display: block;
+        text-align: center;
+    }
+
+    .create-link:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="container">
+    <h1 class="header">Welcome To Your Blog</h1>
+    <h2 class="sub-header">Posts</h2>
+
+    <ul class="post-list">
+        {% for post_id, post in posts.items() %}
+            <li class="post-item">
+                <a href="{{ url_for('post', post_id=post_id) }}" class="post-link">{{ post['title'] }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('create') }}" class="create-link">Create New Post</a>
+</div>
+{% endblock %}

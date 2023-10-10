@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head></head>
+<style>
+body {
+    background-image: url("{{ url_for('static', filename='builtin/postbg.jpg') }}");
+    background-repeat:no-repeat;
+    background-attached:fixed;
+    background-size:cover;
+}
+.home-button {
+    display: inline-block; 
+    text-decoration: none;
+	width: 10%; 
+    height: 10%; 
+    padding: 10px; 
+}
+
+.home-button:hover {
+    opacity: 0.8; 
+}
+
+</style
+<body>
+	<!-- We add this in base.jinja2 and outside the content block so that it is not overridden by other pages. -->
+	<a href="{{ url_for('home') }}" class="home-button">
+    <img src="{{ url_for('static', filename='builtin/home.png') }}" alt="Home">
+</a>
+
+	{% block content %}
+
+	{% endblock %}
+</body>
+</html>
