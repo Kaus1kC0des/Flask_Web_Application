@@ -1,4 +1,4 @@
-#Flask_Web_Application
+# Flask_Web_Application
 This Flask web application allows users to create and manage blog posts in reverse chronological order. 
 It is a simple application. 
 Once you have created a blog post, it will be published to the website and will be visible to all users. 
