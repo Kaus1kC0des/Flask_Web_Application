@@ -11,10 +11,7 @@ cursor.execute(
 conn.commit()
 conn.close()
 
-
-
 app = Flask(__name__)
-
 
 
 @app.route('/')
@@ -70,4 +67,4 @@ def create():
 
 
 if __name__ == '__main__':
-    app.run(debug=True,port=os.getenv("PORT", default=5000))
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
