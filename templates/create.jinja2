@@ -2,6 +2,7 @@
 
 {% block content %}
 <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
     /* Add your CSS styles here */
     .create-post {
         max-width: 800px;
@@ -10,6 +11,8 @@
         background-color: #f9f9f9;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: 'Poppins', sans-serif;
+
     }
 
     .create-post h1 {
@@ -17,11 +20,15 @@
         color: #333;
         margin-bottom: 20px;
         text-align: center;
-        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     .create-post form {
         text-align: center;
+    }
+
+    .create-post-btn {
+        font-family: 'Poppins', sans-serif;
     }
 
     .create-post label {
@@ -29,7 +36,7 @@
         font-size: 16px;
         color: #555;
         margin-bottom: 10px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     .create-post input[type="text"],
@@ -69,7 +76,7 @@
             <textarea name="content" id="content"></textarea>
         </div>
 
-        <div>
+        <div class="create-post-btn">
             <input type="submit" value="Create Post">
         </div>
     </form>
